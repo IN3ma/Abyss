@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyss Market</title>
+</head>
+<style>
+    body{
+        animation: abyys-body-color 10s infinite;
+    }
+    @keyframes abyys-body-color {
+        0%{
+            background-color: rgb(48, 48, 48);
+        }
+        50%{
+            background-color: rgb(56, 56, 56);
+        }
+        100%{
+            background-color: rgb(48, 48, 48);
+        }
+    }
+    header{
+        background-color:rgba(0, 0, 0, 0.11);
+        backdrop-filter: blur(16.5px);
+        top:0;
+        left:0;
+        border:solid;
+        border-color:rgb(36, 36, 36);
+        border-top-width: 0px;
+        border-right-width: 0px;
+        border-left-width: 0px;
+        border-bottom-width: 2px;
+        border-radius: 10px;
+        position:sticky;
+        width:95%;
+        margin-left:2.5%;
+        height: 10vh;
+        display: flex;
+    }
+    .txt-1-err0r{
+        color:black;
+        font-family: arial;
+        text-align: center;
+    }
+    .span-class-txt-1{
+        color:rgb(44, 0, 0);
+    }
+    .h2-1-on-header{
+        color:black;
+        font-family: arial;
+        margin-left:2vw;
+    }
+    .home{
+        color:black;
+        font-family: arial;
+        margin-left:50vw;
+        transition: all  1s;
+    }
+    .home:hover{
+        color:rgb(39, 0, 0);
+    }
+    .store{
+        color:black;
+        font-family: arial;
+        margin-left:7vw;
+        transition: all  1s;
+    }
+    .store:hover{
+        color:rgb(39, 0, 0);
+    }
+    .txt-xd{
+        color: rgb(27, 27, 27);
+        font-family: arial;
+        margin-left:3vw;
+        margin-top:4vh;
+    }
+    .Firearms1{
+        color:rgb(34, 34, 34);
+        margin-left:3vw;
+        margin-top: 9vh;
+        font-family: arial;
+    }
+    .daddy-divvv54vv{
+        display:flex;
+    }
+    .div111{
+        background-color: rgb(31, 31, 31);
+        border:solid;
+        border-radius: 10px;
+        border-width:0.8px;
+        border-color:rgb(14, 14, 14);
+        width:98%;
+        margin-left: 1%;
+        display: flex;
+    }
+    .img-desert-eagle{
+        width:13vw;
+        border:none;
+        border-radius: 10px;
+        margin-left:2.5vw;
+        margin-top:1.5vh;
+    }
+    .div-de{
+        font-family: arial;
+        background-color: rgb(39, 39, 39);
+        border:none;
+        border-radius: 10px;
+        width: 20vw;
+        margin-left:3vw;
+        margin-top:2vh;
+        box-shadow:0px 0px 3px;
+        transition: all 1.5s;
+    }
+    .div-de:hover{
+        transform: translateY(-10px);
+        box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.349);
+    }
+    .DesertEgeal{
+        color:rgb(63, 54, 0);
+    }
+    .prices-xd34{
+        color:rgb(114, 114, 114);
+    }
+    .buy-button{
+        background-color: rgb(51, 0, 0);
+        font-family: arial;
+        color:rgb(88, 0, 0);
+        text-align: center;
+        border:solid;
+        border-radius: 10px;
+        border-top-width: 0px;
+        border-right-width: 0px;
+        border-left-width: 0px;
+        border-bottom-width: 2px;
+        height: 5vh;
+        transition: all 1s;
+    }
+    .buy-button:hover{
+        transform: translateY(-3px);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.651);
+    }
+
+    .ak-47div{
+        font-family: arial;
+        background-color: rgb(39, 39, 39);
+        border:none;
+        border-radius: 10px;
+        width: 20vw;
+        margin-left:10vw;
+        margin-top:2vh;
+        box-shadow:0px 0px 3px;
+        transition: all 1.5s;
+    }
+    .ak-47div:hover{
+        transform: translateY(-10px);
+        box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.349);
+    }
+    .img-ak47{
+        width:13vw;
+        border:none;
+        border-radius: 10px;
+        margin-left:3.5vw;
+        margin-top:1.5vh;
+    }
+    .ak-47txt{
+        color:rgb(87, 51, 5);
+        margin-top: 11vh;
+    }
+
+    .shotgun-div{
+        font-family: arial;
+        background-color: rgb(39, 39, 39);
+        border:none;
+        border-radius: 10px;
+        width: 20vw;
+        margin-left:10vw;
+        margin-top:2vh;
+        box-shadow:0px 0px 3px;
+        transition: all 1.5s;
+    }
+    .shotgun-div:hover{
+        transform: translateY(-10px);
+        box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.349);
+    }
+    .shotguntxt{
+        color:black;
+        margin-top: 7vh;
+    }
+
+    .continued-guns{
+        font-family: arial;
+        color:rgb(109, 109, 109);
+        margin-left:1.5vw;
+        margin-right:1.5vw;
+        margin-top:30vh;
+        border:solid;
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.315);
+        max-height: fit-content;
+        border-width: 0.7px;
+        border-color:rgba(0, 0, 0, 0.219);
+        transition: all 1s;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    }
+    .continued-guns:hover{
+        transform: translate(6px);
+        box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .img-flowe{
+        width:13vw;
+        border:none;
+        border-radius: 10px;
+        margin-left:3.5vw;
+        margin-top:1.5vh;
+    }
+    .h2-drugs-flower{
+        color:rgb(0, 68, 0);
+    }
+    .crystaltxt{
+        color:rgb(192, 191, 191);
+    }
+    .opiumguntxt{
+        color:rgb(70, 59, 1);
+        margin-top: 7vh;
+    }
+
+    .img-opium{
+        width:13vw;
+        border:none;
+        border-radius: 10px;
+        margin-left:3.5vw;
+        margin-top:1.5vh;
+    }
+
+    .txt-2-err0r{
+        font-family: arial;
+        color:rgb(20, 20, 20);
+        text-align: center;
+    }
+    footer {
+    background: linear-gradient(180deg, rgb(25, 25, 25), rgb(10, 10, 10));
+    border-top: 1px solid rgb(55, 0, 0);
+    border-radius: 12px 12px 0 0;
+    margin-top: 15vh;
+    padding: 40px 5%;
+    font-family: Arial;
+    color: rgb(130, 130, 130);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand h2 {
+    color: rgb(90, 0, 0);
+    letter-spacing: 2px;
+}
+
+.footer-brand p {
+    color: rgb(110, 110, 110);
+    font-size: 14px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    color: rgb(90, 90, 90);
+}
+
+.footer-links a {
+    display: block;
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+    margin-top: 12px;
+    transition: 0.4s;
+}
+
+.footer-links a:hover {
+    color: rgb(120, 0, 0);
+    transform: translateX(5px);
+}
+
+.footer-contact p {
+    font-size: 14px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgb(35, 35, 35);
+    margin-top: 35px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(65, 65, 65);
+}
+
+.footer-bottom span {
+    color: rgb(90, 0, 0);
+}
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Header fix */
+
+    header {
+        width: 96%;
+        margin: 0 auto;
+        height: 65px;
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .h2-1-on-header {
+        margin: 0;
+        font-size: 17px;
+        white-space: nowrap;
+    }
+
+    .home,
+    .store {
+        margin: 0;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    /* Main texts */
+
+    .txt-1-err0r {
+        font-size: 21px;
+        line-height: 1.7;
+        padding: 0 8px;
+    }
+
+    .txt-xd {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-left: 4%;
+    }
+
+    .Firearms1 {
+        font-size: 23px;
+        margin: 40px 4% 20px;
+    }
+
+    /* Product cards */
+
+    .div111 {
+        width: 94%;
+        margin: 0 auto;
+        padding: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .div-de,
+    .ak-47div,
+    .shotgun-div {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-desert-eagle,
+    .img-ak47,
+    .img-flowe,
+    .img-opium {
+        width: 95%;
+        height: 120px;
+        object-fit: contain;
+        margin: 10px auto;
+    }
+
+    .div-de h2,
+    .ak-47div h2,
+    .shotgun-div h2 {
+        font-size: 16px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
+    .ak-47txt,
+    .shotguntxt,
+    .opiumguntxt {
+        margin-top: 15px;
+    }
+
+    .prices-xd34 {
+        font-size: 15px !important;
+    }
+
+    .buy-button {
+        width: 100%;
+        min-height: 44px;
+        height: auto;
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buy-button h2 {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .continued-guns {
+        font-size: 16px;
+        margin: 10px;
+        padding: 10px;
+        align-self: center;
+    }
+
+    .txt-2-err0r {
+        font-size: 15px;
+        line-height: 2;
+        padding: 12px;
+    }
+
+    /* Footer compact */
+
+    footer {
+        margin-top: 50px;
+        padding: 22px 20px;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .footer-brand h2 {
+        font-size: 18px;
+    }
+
+    .footer-brand p,
+    .footer-contact p,
+    .footer-links a {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .footer-links h3,
+    .footer-contact h3 {
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        padding-top: 12px;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 360px) {
+
+    header {
+        gap: 6px;
+        padding: 0 7px;
+    }
+
+    .h2-1-on-header {
+        font-size: 14px;
+    }
+
+    .home,
+    .store {
+        font-size: 13px;
+    }
+
+    .div111 {
+        gap: 9px;
+        padding: 8px;
+    }
+
+    .div-de,
+    .ak-47div,
+    .shotgun-div {
+        padding: 7px;
+    }
+
+    .div-de h2,
+    .ak-47div h2,
+    .shotgun-div h2 {
+        font-size: 14px;
+    }
+
+    .buy-button h2 {
+        font-size: 12px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+}
+@media (max-width: 600px) {
+
+    /* Header fix */
+    header {
+        width: 94%;
+        max-width: 94%;
+        margin: 0 auto;
+        padding: 0 10px;
+        left: auto;
+        right: auto;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        overflow: hidden;
+    }
+
+    .h2-1-on-header {
+        margin: 0;
+        font-size: 15px;
+        white-space: nowrap;
+        flex-shrink: 1;
+    }
+
+    .home,
+    .store {
+        margin: 0;
+        font-size: 14px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    /* Prevent product cards overlapping */
+
+    .div111 {
+        width: 94%;
+        max-width: 94%;
+        margin: 0 auto;
+        padding: 10px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .div-de,
+    .ak-47div,
+    .shotgun-div {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .continued-guns {
+        margin: 10px 0;
+        align-self: center;
+    }
+}
+
+@media (max-width: 360px) {
+
+    header {
+        padding: 0 6px;
+        gap: 5px;
+    }
+
+    .h2-1-on-header {
+        font-size: 13px;
+    }
+
+    .home,
+    .store {
+        font-size: 12px;
+    }
+
+    .div111 {
+        gap: 10px;
+        padding: 7px;
+    }
+}
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+    }
+}
+</style>
+<body>
+    <h2 class="txt-1-err0r">
+        Welcome to <span class="span-class-txt-1">Abyss Market</span><br>Everything below price!
+    </h2>
+    <header>
+        <h2 class="h2-1-on-header">
+            Abyss Market
+        </h2>
+        <h2 class="home">
+            Home
+        </h2>
+        <h2 class="store">
+            Store
+        </h2>
+    </header>
+    <main>
+        <h2 class="txt-xd">
+            Buy Everything you need right here.<br>Speed,Security,Below market prices!
+        </h2>
+        <h2 class="Firearms1">
+            Firearms:
+        </h2>
+        <div class="daddy-divvv54vv">
+            <div class="div111">
+                <div class="div-de">
+                <img src="./ws/images.jpg" class="img-desert-eagle">
+                <h2 class="DesertEgeal">
+                    Desert Eagle - gold
+                </h2>
+                <h2 class="prices-xd34">
+                    Price: 1,499$
+                </h2>
+                <div class="buy-button">
+                    <h2>Click to buy</h2>
+                </div>
+                </div>
+
+                <div class="ak-47div">
+                    <img src="./ws/images (2).jpg" class="img-ak47">
+                <h2 class="ak-47txt">
+                    AK 47 - classic
+                </h2>
+                <h2 class="prices-xd34">
+                    Price: 1,999$
+                </h2>
+                <div class="buy-button">
+                    <h2>Click to buy</h2>
+                </div>
+                </div>
+
+                <div class="shotgun-div">
+                    <img src="./ws/images (3).jpg" class="img-ak47">
+                    <h2 class="shotguntxt">
+                        Remington 870 - black
+                    </h2>
+                    <h2 class="prices-xd34">
+                    Price: 1,999$
+                </h2>
+                <div class="buy-button">
+                    <h2>Click to buy</h2>
+                </div>
+                </div>
+
+                <h2 class="continued-guns">
+                    continued →
+                </h2>
+            </div>
+        </div>
+
+        <h2 class="Firearms1">
+            Drugs:
+        </h2>
+        <div class="div111">
+            <div class="div-de">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx_Nc995Y7MapP-qKLgXM7FxHkQCDJEIKIE5s7d7CgeZ6ZXhKzyR22F0M&s=10" class="img-flowe">
+                <h2 class="h2-drugs-flower">
+                    Marijuana
+                </h2>
+                <h2 class="prices-xd34">
+                    Price: 300$
+                </h2>
+                <h2 class="buy-button">
+                    Click to buy
+                </h2>
+            </div>
+
+            <div class="ak-47div">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0h97StrQtQsGoBNJtfOdmZKUyTVbnw7Lntufeu_dkIg&s=10" class="img-ak47">
+                <h2 class="crystaltxt">
+                    Crystal
+                </h2>
+                <h2 class="prices-xd34">
+                    price : 699$
+                </h2>
+                <h2 class="buy-button">
+                    Click to buy
+                </h2>
+            </div>
+
+            <div class="shotgun-div">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9wTHfr7LW0KwA-ZD6uEqmQ7Mqp5K1FIhJINo1d-oVvA&s=10" class="img-opium">
+                <h2 class="opiumguntxt">
+                    Opium
+                </h2>
+                <h2 class="prices-xd34">
+                    Price: 233$
+                </h2>
+                <h2 class="buy-button">
+                    Click to buy
+                </h2>
+            </div>
+            <h2 class="continued-guns">
+                continued →
+            </h2>
+        </div>
+        <h2 class="txt-2-err0r">
+            To view thousands of new and rare products, visit<br> the store section of the website and select the<br> item you are looking for.
+        </h2>
+    </main>
+    <footer>
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h2>ABYSS MARKET</h2>
+            <p>
+                Enter the darkness.<br>
+                Discover the unknown.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Navigation</h3>
+            <a href="#">Home</a>
+            <a href="#">Store</a>
+            <a href="#">About Us</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Information</h3>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>Telegram: @Orabyss</p>
+            <p>Location: ********</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+             <span>ABYSS MARKET</span>.
+            All Rights Reserved.
+        </p>
+
+    </div>
+</footer>
+</body>
+</html>
